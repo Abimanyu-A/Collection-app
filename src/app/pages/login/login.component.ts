@@ -40,7 +40,7 @@ export class LoginComponent {
     const { username, password } = this.loginForm.value;
 
     // Dummy credentials for testing
-    const validUser = { username: 'admin', password: 'admin123' };
+    const validUser = { username: 'jack', password: '123' };
 
     if (username === validUser.username && password === validUser.password) {
       localStorage.setItem('user', JSON.stringify({ username }));
