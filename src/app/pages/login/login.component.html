@@ -1,0 +1,39 @@
+<ion-content class="ion-padding">
+  <div class="login-container">
+    <div class="login-icon">
+      <ion-icon name="person-circle-outline"></ion-icon>
+    </div>
+    <div class="login-card">
+      <h2 class="text-white text-center">Sign In</h2>
+      <form [formGroup]="loginForm" (ngSubmit)="login()">
+        <ion-item class="form-group">
+          <ion-input 
+            type="text" 
+            formControlName="username" 
+            placeholder="Username or Mobile Number" 
+            required>
+          </ion-input>
+        </ion-item>
+        <ion-item class="form-group">
+          <ion-input 
+            type="password" 
+            formControlName="password" 
+            placeholder="Password" 
+            required>
+          </ion-input>
+        </ion-item>
+        <ion-item lines="none" class="form-check">
+          <ion-checkbox slot="start"></ion-checkbox>
+          <label class="text-white">Remember Me</label>
+        </ion-item>
+        <div class="login-button">
+          <ion-button expand="block" color="warning" type="submit" [disabled]="loginForm.invalid">Log In</ion-button>
+        </div>
+      </form>
+      <p class="forgot-password text-white text-center">
+        Forgot password? <a href="#" class="text-warning font-weight-bold">Ask admin</a>
+      </p>
+    </div>
+    <p class="terms">Terms and Conditions</p>
+  </div>
+</ion-content>

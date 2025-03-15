@@ -1,0 +1,7 @@
+{
+  "name": "collection-app",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}
