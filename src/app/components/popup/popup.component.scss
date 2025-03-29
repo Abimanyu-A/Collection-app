@@ -1,0 +1,29 @@
+.custom-popup {
+  width: 350px;  
+  max-width: 90%; 
+  min-height: 150px; 
+  padding: 20px;
+  text-align: center;
+  background: white; 
+  color: black; 
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  margin: 0;
+}
+
+.popup-content {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+}
+
+.popup-actions {
+  margin-top: 10px;
+}
+
+ion-button {
+  color: #fff; /* Match theme */
+  background: #2b8a3e;
+}

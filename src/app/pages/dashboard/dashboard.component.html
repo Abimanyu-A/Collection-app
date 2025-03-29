@@ -1,5 +1,5 @@
 <!-- dashboard.component.html -->
-<ion-content class="ion-padding" style="--background: rgb(206, 205, 205);">
+<ion-content style="--background: rgb(206, 205, 205);">
   <div class="dashboard-container">
     <!-- Header -->
     <div class="dashboard-header">
@@ -88,9 +88,9 @@
         Journey Ended
       </ion-button>
       
-      <ion-button expand="block" 
+      <ion-button 
                   class="eod-button" 
-                  (click)="processEOD()">
+                  (click)="presentPopup()">
         EOD Process
         <ion-icon name="arrow-forward" slot="end"></ion-icon>
       </ion-button>

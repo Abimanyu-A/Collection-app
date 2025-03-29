@@ -3,6 +3,13 @@ import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule, FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { IonicModule, AlertController, ToastController } from '@ionic/angular';
 import { Router } from '@angular/router';
+import { addIcons } from 'ionicons';
+import { personCircleOutline } from 'ionicons/icons';
+
+addIcons({
+  personCircleOutline,
+
+})
 
 @Component({
   selector: 'app-login',

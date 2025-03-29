@@ -1,0 +1,78 @@
+<ion-content style="--background: rgb(206, 205, 205);">
+  <div class="journey-container">
+    <!-- Header -->
+    <div class="journey-header">
+      <ion-icon name="arrow-back" class="back-icon" (click)="goBack()"></ion-icon>
+      <h2>Start your Day</h2>
+    </div>
+
+    <!-- Journey Details Form -->
+    <div class="journey-card">
+      <h3>Journey Details</h3>
+      <div class="input-group">
+        <label for="start-km">Start KM</label>
+        <ion-input id="start-km" placeholder="Enter the current KM"></ion-input>
+      </div>
+      <div class="image-upload">
+        <label>Vehicle KM start</label>
+        <div class="upload-box">
+          <ion-icon name="cloud-upload-outline"></ion-icon>
+        </div>
+      </div>
+      <ion-button expand="full" class="start-btn">Start your day</ion-button>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <ion-footer class="mobile-footer">
+    <ion-toolbar style="border: 0 white;">
+      <div class="footer-items">
+        <div class="footer-item">
+          <ion-icon name="document-text"></ion-icon>
+          <span>Collection</span>
+        </div>
+        <div class="footer-item">
+          <ion-icon name="calendar"></ion-icon>
+          <span>My Schedule</span>
+        </div>
+        <div class="footer-item active">
+          <ion-icon name="home"></ion-icon>
+        </div>
+        <div class="footer-item">
+          <ion-icon name="notifications"></ion-icon>
+          <span>Notifications</span>
+        </div>
+        <div class="footer-item">
+          <ion-icon name="person"></ion-icon>
+          <span>Profile</span>
+        </div>
+      </div>
+    </ion-toolbar>
+  </ion-footer>
+  
+  <!-- Sidebar for larger screens -->
+  <div class="desktop-sidebar">
+    <div class="sidebar-items">
+      <div class="sidebar-item">
+        <ion-icon name="document-text"></ion-icon>
+        <span>Collection</span>
+      </div>
+      <div class="sidebar-item">
+        <ion-icon name="calendar"></ion-icon>
+        <span>My Schedule</span>
+      </div>
+      <div class="sidebar-item active">
+        <ion-icon name="home"></ion-icon>
+        <span>Home</span>
+      </div>
+      <div class="sidebar-item">
+        <ion-icon name="notifications"></ion-icon>
+        <span>Notifications</span>
+      </div>
+      <div class="sidebar-item">
+        <ion-icon name="person"></ion-icon>
+        <span>Profile</span>
+      </div>
+    </div>
+  </div>
+</ion-content>

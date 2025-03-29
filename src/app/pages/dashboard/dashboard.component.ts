@@ -1,9 +1,12 @@
 // dashboard.component.ts
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { IonicModule } from '@ionic/angular';
+import { ModalController,IonicModule } from '@ionic/angular';
 import { FormsModule } from '@angular/forms';
+import { Router } from '@angular/router';
 import { addIcons } from 'ionicons';
+import { AlertController } from '@ionic/angular/standalone';
+import { PopupComponent } from 'src/app/components/popup/popup.component';
 import { person, home, chevronForward, arrowForward, notifications, calendar, documentText, cash, handLeft } from 'ionicons/icons';
 
 
@@ -28,6 +31,24 @@ addIcons({
   imports: [CommonModule, IonicModule, FormsModule]
 })
 export class DashboardComponent implements OnInit {
+  constructor(
+    private modalCtrl: ModalController,
+    private router: Router,
+    private alertController: AlertController
+  ){}
+
+  async presentPopup() {
+    const modal = await this.modalCtrl.create({
+      component: PopupComponent,
+      cssClass: 'transparent-modal', 
+      showBackdrop: true, 
+      backdropDismiss: true
+    });
+
+    return await modal.present();
+  }
+
+
   userName: string = 'Dhruv';
   currentDate: string = '02 Jan, 2024';
   location: string = 'Sayalkudi - Nerkudi';
@@ -70,16 +91,14 @@ export class DashboardComponent implements OnInit {
     }
   ];
 
-  constructor() { }
-
   ngOnInit() { }
   
   startJourney() {
-    console.log('Journey started');
     this.journeyStarted = true;
   }
   
   endJourney() {
+    this.router.navigate(['/journey']);
     console.log('Journey ended');
     this.journeyStarted = false;
   }
